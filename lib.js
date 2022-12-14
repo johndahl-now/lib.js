@@ -8,8 +8,8 @@ if( !Array.prototype.newMethod ){
 }
 */
 
-if( !String.prototype.newMethod ){
-    String.prototype.newMethod = function( result_length, pad_char ){
+if( !String.prototype.pad ){
+    String.prototype.pad = function( result_length, pad_char ){
 		/*
 		Given a string, an integer length, and an optional character,
 		pad the string to the requested length with the character.
@@ -19,7 +19,7 @@ if( !String.prototype.newMethod ){
 		
 		pad_char = pad_char ? pad_char.toString() : '.';
 		result_length = parseInt( result_length );
-        text = this.toString();
+        	text = this.toString();
 
 		if ( Math.abs( result_length ) <= text.length ){ return text; }
 
